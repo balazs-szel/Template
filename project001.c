@@ -30,6 +30,11 @@ int main() {
 
     printf("Enter two numbers (separated by space): ");
     scanf("%d %d", &num1, &num2);
+    if(num1>num2){    /* change numbers if num1>nu2 */
+        num1=num1+num2;
+        num2=num1-num2;
+        num1=num1-num2;
+    };
    
     listPrimesBetween(num1, num2);
 
