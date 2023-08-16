@@ -11,7 +11,7 @@ int num1=0, num2=0;
     printf("Az elso szám: %d\n", num1);
     printf("Az második szám: %d\n", num2);
 
-    if(num1>num2){
+    if(num1>num2){ /* numbers changing methode */
         int i=0;
         i=num1;
         num1=num2;
@@ -20,8 +20,5 @@ int num1=0, num2=0;
 
     printf("A megcserélt elso szám: %d\n", num1);
     printf("A megcserélt második szám: %d\n", num2);
-
-
-
     return EXIT_SUCCESS;
 }
