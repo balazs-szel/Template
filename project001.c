@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "file.h"
+#include<stdlib.h>
+
+FILE *fp;
 
 int isPrime(int num) {
     if (num <= 1) {
@@ -16,15 +17,20 @@ int isPrime(int num) {
 
 void listPrimesBetween(int start, int end) {
     printf("Prime numbers between %d and %d are:\n", start, end);
-    
+
+    fp = fopen("primes.txt", "w");
+
     for (int num = start; num <= end; num++) {
         if (isPrime(num)) {
             printf("%d ", num);
-            void file_storage();
+
+         fprintf(fp, "%d ,",num);
         }
     }
     
     printf("\n");
+    fclose(fp);
+
 }
 
 int main() {
@@ -32,12 +38,8 @@ int main() {
 
     printf("Enter two numbers (separated by space): ");
     scanf("%d %d", &num1, &num2);
-    if(num1>num2){    /* change numbers if num1>num2 */
-        num1=num1+num2;
-        num2=num1-num2;
-        num1=num1-num2;
-    };
-   
+
     listPrimesBetween(num1, num2);
+
     return 0;
 }
