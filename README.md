@@ -1,3 +1,4 @@
+This readme.md file has been created by ChatGPT. Just for fun. :)
 # Template Repository
 
 Welcome to my template repository! This repository serves as a starting point for various projects, providing a basic directory structure and setup. Feel free to use it as a foundation for your projects.
